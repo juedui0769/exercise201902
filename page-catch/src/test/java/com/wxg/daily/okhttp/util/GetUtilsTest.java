@@ -1,6 +1,7 @@
 package com.wxg.daily.okhttp.util;
 
 import org.junit.AfterClass;
+import org.junit.Ignore;
 import org.junit.Test;
 
 public class GetUtilsTest {
@@ -22,6 +23,7 @@ public class GetUtilsTest {
      * @throws InterruptedException
      */
     @Test
+    @Ignore
     public void test01() throws InterruptedException {
         for (int i=0;i<5;i++){
             String local_url = "http://localhost:8088/hello";
