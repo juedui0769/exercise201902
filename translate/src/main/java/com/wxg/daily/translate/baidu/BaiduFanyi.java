@@ -56,6 +56,11 @@ public class BaiduFanyi {
 
     /**
      * `volatile` : 是否添加了`volatile`, 本方法就是线程安全的？
+     *
+     * 2019年3月8日16:35:33
+     *      -> 应该是线程安全的！
+     *      ->《JAVA并发编程实战》16.1.3
+     *      -> volatile变量规则。对 volatile 变量的写入操作必须在对该变量的读操作之前执行。
      * @return
      */
     public static boolean isInit() {
