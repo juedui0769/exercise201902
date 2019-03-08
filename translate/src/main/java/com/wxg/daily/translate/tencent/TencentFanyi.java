@@ -2,13 +2,18 @@ package com.wxg.daily.translate.tencent;
 
 import com.google.common.base.Charsets;
 import com.google.common.io.Files;
-import com.tencentcloudapi.common.Credential;
-import com.tencentcloudapi.common.exception.TencentCloudSDKException;
-import com.tencentcloudapi.tmt.v20180321.TmtClient;
-import com.tencentcloudapi.tmt.v20180321.models.TextTranslateRequest;
-import com.tencentcloudapi.tmt.v20180321.models.TextTranslateResponse;
+//import com.tencentcloudapi.common.Credential;
+//import com.tencentcloudapi.common.exception.TencentCloudSDKException;
+//import com.tencentcloudapi.tmt.v20180321.TmtClient;
+//import com.tencentcloudapi.tmt.v20180321.models.TextTranslateRequest;
+//import com.tencentcloudapi.tmt.v20180321.models.TextTranslateResponse;
 import com.wxg.daily.translate.baidu.util.FanyiLang;
+import com.wxg.daily.translate.tencent.common.Credential;
+import com.wxg.daily.translate.tencent.common.exception.TencentCloudSDKException;
 import com.wxg.daily.translate.tencent.exception.TencentFanyiException;
+import com.wxg.daily.translate.tencent.v20180321.TmtClient;
+import com.wxg.daily.translate.tencent.v20180321.models.TextTranslateRequest;
+import com.wxg.daily.translate.tencent.v20180321.models.TextTranslateResponse;
 
 import java.io.File;
 import java.io.IOException;
