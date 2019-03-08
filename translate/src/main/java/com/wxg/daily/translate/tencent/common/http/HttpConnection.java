@@ -19,6 +19,7 @@
 
 package com.wxg.daily.translate.tencent.common.http;
 
+import com.wxg.daily.okhttp.util.CommonOkClients;
 import com.wxg.daily.translate.tencent.common.exception.TencentCloudSDKException;
 import okhttp3.*;
 
@@ -35,7 +36,12 @@ public class HttpConnection {
 	private OkHttpClient client;
 	
     public HttpConnection(Integer connTimeout, Integer readTimeout, Integer writeTimeout) {
-    	this.client = new OkHttpClient();
+//    	this.client = new OkHttpClient();
+
+		// 使用我自己封装的`client`获取方法，便于统一管理
+		this.client = CommonOkClients.getClient();
+
+    	// 2019年3月8日18:24:55，okhttp3中已经没有下面的API了。
 //    	this.client.setConnectTimeout(connTimeout, TimeUnit.SECONDS);
 //    	this.client.setReadTimeout(readTimeout, TimeUnit.SECONDS);
 //    	this.client.setWriteTimeout(writeTimeout, TimeUnit.SECONDS);
