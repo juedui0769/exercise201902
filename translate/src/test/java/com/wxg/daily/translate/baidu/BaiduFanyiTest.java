@@ -1,8 +1,10 @@
 package com.wxg.daily.translate.baidu;
 
 import com.wxg.daily.okhttp.util.CommonOkClients;
+import com.wxg.daily.translate.TranslateTests;
 import com.wxg.daily.translate.baidu.info.BaiduTranslateResult;
 import com.wxg.daily.translate.baidu.util.FanyiLang;
+import org.junit.Ignore;
 import org.junit.Test;
 
 import static org.junit.Assert.*;
@@ -34,8 +36,11 @@ public class BaiduFanyiTest {
     /**
      * output:
      * BaiduTranslateResult{from='zh', to='en', trans_result=[TransResult{src='梨', dst='Pear'}]}
+     *
+     * @see TranslateTests#translateByBaidu()
      */
     @Test
+    @Ignore
     public void invokeByOkhttp() {
         String query = "梨";
         BaiduTranslateResult baiduTranslateResult = baiduFanyi.invokeByOkhttp(query, FanyiLang.EN);
