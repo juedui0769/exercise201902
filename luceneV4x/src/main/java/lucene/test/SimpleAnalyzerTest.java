@@ -23,7 +23,8 @@ public class SimpleAnalyzerTest {
             String text = "The Lucene PMC is pleased to announce the release of the Apache Solr Reference Guide for Solr 4.4.";
 
             // 简单分词器(以非字母符来分割文本信息，并将语汇单元统一为小写形式，并去掉数字类型的字符)
-            SimpleAnalyzer sa = new SimpleAnalyzer(Version.LUCENE_44);
+//            SimpleAnalyzer sa = new SimpleAnalyzer(Version.LUCENE_44);
+            SimpleAnalyzer sa = new SimpleAnalyzer(); // 上面的构造方法已经被弃用。
 
             TokenStream ts = sa.tokenStream("field", text);
             CharTermAttribute ch = ts.addAttribute(CharTermAttribute.class);
