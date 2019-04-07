@@ -14,7 +14,10 @@
 - 参考 <https://segmentfault.com/a/1190000004422101> 中的写法，基本的用法如下：
 - ```
   SimpleAnalyzer analyzer = new SimpleAnalyzer();
-  String text = "hello";
+  String text = "Lucene is a Java full-text search engine. "
+      + "Lucene is not a complete application, "
+      + "but rather a code library and API that can easily "
+      + "be used to add search capabilities to applications.";
   TokenStream tokenStream = analyzer.tokenStream("content", new StringReader(text));
   CharTermAttribute charTermAttribute = tokenStream.addAttribute(CharTermAttribute.class);
   try {
@@ -42,6 +45,15 @@
 - <https://nvd.nist.gov/vuln/detail/CVE-2017-12629>
 - 提交代码后，github弹出警告，建议使用Lucene 7.1.0以上的版本
 - 我暂时不修改lucene版本，因为我这里的代码都是测试代码，从网上搜罗过来的。而且修改了之后，和我这个module的标题`luceneV4x`有些不符。
+
+### 提交时也能看到提醒
+
+> remote: Resolving deltas: 100% (3/3), completed with 3 local objects.
+> remote:
+> remote: GitHub found 1 vulnerability on juedui0769/exercise201902's default branch (1 high). To find out more, visit:
+> remote:      https://github.com/juedui0769/exercise201902/network/alerts
+> remote:
+> To https://github.com/juedui0769/exercise201902.git
 
 
 
