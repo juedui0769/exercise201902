@@ -12,6 +12,7 @@
         <module>page-catch</module>
         <module>page-analysis</module>
         <module>translate</module>
+        <module>luceneV4x</module>
     </modules>
 
     <properties>
