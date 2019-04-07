@@ -30,3 +30,21 @@
   ```
 - 如上, 'analyzer'和'steam'都需要`close`的
 
+## github安全警告
+
+- ```
+  <dependency>
+    <groupId>org.apache.lucene</groupId>
+    <artifactId>lucene-core</artifactId>
+    <version>[7.1.0,)</version>
+  </dependency>
+  ```
+- <https://nvd.nist.gov/vuln/detail/CVE-2017-12629>
+- 提交代码后，github弹出警告，建议使用Lucene 7.1.0以上的版本
+- 我暂时不修改lucene版本，因为我这里的代码都是测试代码，从网上搜罗过来的。而且修改了之后，和我这个module的标题`luceneV4x`有些不符。
+
+
+
+
+
+
