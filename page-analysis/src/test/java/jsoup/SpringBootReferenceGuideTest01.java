@@ -1,6 +1,7 @@
 package jsoup;
 
 import com.google.common.base.Charsets;
+import com.google.common.io.Files;
 import org.jsoup.Jsoup;
 import org.jsoup.nodes.Document;
 import org.jsoup.nodes.Element;
@@ -46,12 +47,49 @@ public class SpringBootReferenceGuideTest01 {
         System.out.println("count : " + count);
     }
 
+    /**
+     * 获取 chapter 内容，存储到本地
+     * @throws IOException
+     */
+    @Test
+    public void obtainChaptersContent() throws IOException {
+        Elements chapters = doc.select("div.chapter");
+        StringBuilder ss = new StringBuilder();
+        for (Element ch : chapters) {
+            ss.append(ch.text());
+        }
+        Files.write(ss.toString().getBytes(Charsets.UTF_8),
+                new File("F:\\wxgtest\\66", "chaptersContent01.txt"));
+    }
+
+    /**
+     * 获取'附录'内容，存储到本地
+     * @throws IOException
+     */
+    @Test
+    public void obtainAppendixContent() throws IOException {
+        Elements appendixs = doc.select("div.appendix");
+        StringBuilder ss = new StringBuilder();
+        for (Element a : appendixs) {
+            ss.append(a.text());
+        }
+        Files.write(ss.toString().getBytes(Charsets.UTF_8),
+                new File("F:\\wxgtest\\66", "appendixContent01.txt"));
+    }
+
+
     @Test
     public void howManyChapters() {
         Elements chapters = doc.select("div.chapter");
         int size = chapters.size();
-        System.out.println("size : " + size);
+        System.out.println("chapters size : " + size);
     }
 
+    @Test
+    public void howManyAppendix() {
+        Elements appendixs = doc.select("div.appendix");
+        int size = appendixs.size();
+        System.out.println("appendixs size : " + size);
+    }
 
 }

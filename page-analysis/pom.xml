@@ -12,6 +12,12 @@
     <artifactId>page-analysis</artifactId>
     <version>1.0-SNAPSHOT</version>
 
+    <properties>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+        <maven.compiler.source>1.8</maven.compiler.source>
+        <maven.compiler.target>1.8</maven.compiler.target>
+    </properties>
+
     <dependencies>
 
         <dependency>
@@ -34,9 +40,18 @@
             <version>1.11.3</version>
         </dependency>
 
-
-
-
+        <dependency>
+            <groupId>edu.stanford.nlp</groupId>
+            <artifactId>stanford-corenlp</artifactId>
+            <version>3.9.2</version>
+        </dependency>
+        <!-- stanford-corenlp-3.9.2-models-english.jar 有 990MB 大小 -->
+        <!--<dependency>-->
+            <!--<groupId>edu.stanford.nlp</groupId>-->
+            <!--<artifactId>stanford-corenlp</artifactId>-->
+            <!--<version>3.9.2</version>-->
+            <!--<classifier>models-english</classifier>-->
+        <!--</dependency>-->
     </dependencies>
 
 
