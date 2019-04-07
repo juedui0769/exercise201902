@@ -1,6 +1,8 @@
 package jsoup;
 
 import com.google.common.base.Charsets;
+import com.google.common.io.Files;
+import com.google.common.primitives.Bytes;
 import org.jsoup.Jsoup;
 import org.jsoup.nodes.Document;
 import org.jsoup.nodes.Element;
@@ -8,14 +10,40 @@ import org.junit.Test;
 
 import java.io.File;
 import java.io.IOException;
+import java.io.UnsupportedEncodingException;
 import java.net.MalformedURLException;
 import java.net.URL;
 
 public class JsoupTest {
 
 
+    /**
+     * create at 2019年4月7日10:27:45，
+     * <p>
+     * 从本地html文件中获取body，采用 Guava 保存到本地。
+     * </p>
+     */
+    @Test
+    public void test03() throws IOException {
+        File file = new File("F:\\wxgtest\\66", "SpringBootReferenceGuide.html");
+        Document doc = null;
+        try {
+            doc = Jsoup.parse(file, Charsets.UTF_8.name());
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+        String body = doc.body().outerHtml();
 
+        Files.write(body.getBytes(Charsets.UTF_8.name()),
+                new File("F:\\wxgtest\\66", "body01.html"));
+    }
 
+    /**
+     * comment at 2019年4月7日10:26:27，
+     * <p>
+     * 加载本地 html 文件，获取 body ，使用 utf8 编码(Guava)。
+     * </p>
+     */
     @Test
     public void test02() {
 
