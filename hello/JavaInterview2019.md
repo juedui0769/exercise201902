@@ -10,7 +10,7 @@
 
 > 讲讲类的实例化顺序
 
-参考 [StaticInitOrderTest.java](./hello/src/main/java/com/wxg/daily/study/StaticInitOrderTest.java)
+参考 [StaticInitOrderTest.java](./src/main/java/com/wxg/daily/study/StaticInitOrderTest.java)
 
 
 
