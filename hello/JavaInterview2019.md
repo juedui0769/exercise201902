@@ -57,7 +57,31 @@
 
 
 
+### Other
 
+#### RuntimeException
+
+[RuntimeException](http://tool.oschina.net/uploads/apidocs/jdk-zh/java/lang/RuntimeException.html)
+- `ClassCastException`
+- `IllegalArgumentException`
+- `IndexOutOfBoundsException`
+- `NullPointerException`
+- `UnsupportedOperationException`
+- `MissingResourceException`
+- `NoSuchElementException`
+- `SystemException`
+- `UnknownTypeException`
+
+#### LRU
+
+- Least Recently Used
+- 最近最少使用
+- LRU缓存介绍与实现 (Java) : <https://blog.csdn.net/beiyeqingteng/article/details/7010411>
+
+
+### 如何判断链表是否有环
+
+- <https://blog.csdn.net/u010983881/article/details/78896293>
 
 
 
