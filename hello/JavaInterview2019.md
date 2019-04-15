@@ -79,9 +79,17 @@
 - LRU缓存介绍与实现 (Java) : <https://blog.csdn.net/beiyeqingteng/article/details/7010411>
 
 
-### 如何判断链表是否有环
+#### 如何判断链表是否有环
 
 - <https://blog.csdn.net/u010983881/article/details/78896293>
+
+
+#### 分布式如何保证序号唯一
+
+- 李景枫 : <https://gitee.com/yu120/sequence>
+- 滴滴开源 : <https://gitee.com/didiopensource/tinyid>
+- 百度 : <https://github.com/baidu/uid-generator>
+- 美团 : <https://github.com/Meituan-Dianping/Leaf> , <https://tech.meituan.com/2017/04/21/mt-leaf.html>
 
 
 
